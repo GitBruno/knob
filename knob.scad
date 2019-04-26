@@ -29,8 +29,7 @@ top_round_height = 1;
 // Build
 // -----------------
 
-shaft_depth = shaft_depth - dshaft_startdepth;
-shaft_clear = shaft_depth - shaft_depth;
+dshaft_clear = shaft_depth - (shaft_depth - dshaft_startdepth);
 height = shaft_depth + height_addon;
 diameterBottom = knob_width + skirt_addon;
 
@@ -67,8 +66,8 @@ difference(){
                 cylinder(d1=6.5,d2=0,h=6.5);
             };
         }
-        translate([0,0, shaft_clear])
+        translate([0,0, dshaft_clear])
         translate([dshaft_inset,0,dshaft_startdepth])
-        cube([10,10,shaft_depth-shaft_clear],center=true);
+        cube([10,10,shaft_depth-dshaft_clear],center=true);
     }
 }
