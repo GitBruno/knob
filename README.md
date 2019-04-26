@@ -1,6 +1,6 @@
 # Knob
 
-A parametric 3D printable knob with optional D-shaft.
+A parametric 3D printable knob made in [OpenScad](https://www.openscad.org/).
 
 ![preview](./img/render_001.png)
 
